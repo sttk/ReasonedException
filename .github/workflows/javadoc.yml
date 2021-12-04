@@ -1,0 +1,39 @@
+name: Javadoc
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+
+    - name: Set up Ant ant Ivy
+      run: |
+        ANT_LIB=/usr/share/ant/lib
+        wget https://repo1.maven.org/maven2/org/apache/ivy/ivy/2.5.0/ivy-2.5.0.jar -P ${ANT_LIB}
+        java -version
+        ant -version
+
+    - name: Resolve dependencies
+      run: ant setup
+
+    - name: Javadoc with Ant
+      run: ant javadoc
+
+    - name: Publish Documentation on GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./doc/api
+
