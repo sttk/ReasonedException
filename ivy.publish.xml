@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ivy.publish.xml
+  Copyright (C) 2021 Takayuki Sato All Rights Reserved.
+-->
+
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+  <info organisation="sttk-java" module="reasonederror" revision="${version}"/>
+  <configurations>
+    <conf name="default"/>
+    <conf name="sources"/>
+  </configurations>
+  <publications>
+    <artifact type="pom" ext="pom" conf="default"/>
+    <artifact type="jar" ext="jar" conf="default"/>
+    <artifact type="source" ext="jar" conf="sources" m:classifier="sources"/>
+  </publications>
+</ivy-module>

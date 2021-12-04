@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ivysettings.xml
+  Copyright (C) 2021 Takayuki Sato All Rights Reserved.
+-->
+<ivysettings>
+  <settings defaultResolver="central"/>
+  <resolvers>
+    <ibiblio name="central" m2compatible="true"/>
+    <filesystem name="local" m2compatible="true" checksums="md5,sha1">
+     <artifact pattern="${dir.repo}/[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
+    </filesystem>
+  </resolvers>
+</ivysettings>
