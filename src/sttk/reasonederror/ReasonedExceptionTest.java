@@ -31,6 +31,12 @@ public class ReasonedExceptionTest {
       assertThat(re.getCause()).isNull();
       assertThat(re.getMessage()).isEqualTo(
         "reason=FailToDoSomething");
+      assertThat(re.getClassName()).isEqualTo(
+        "sttk.reasonederror.ReasonedExceptionTest");
+      assertThat(re.getMethodName()).isEqualTo(
+        "should_create_and_throw_an_exception_with_a_reason");
+      assertThat(re.getFileName()).isEqualTo("ReasonedExceptionTest.java");
+      assertThat(re.getLineNumber()).isEqualTo(27);
     }
   }
 
@@ -47,6 +53,12 @@ public class ReasonedExceptionTest {
       assertThat(re.getMessage()).isEqualTo(
         "reason=FailToDoSomething, " +
         "cause=java.io.IOException: Message");
+      assertThat(re.getClassName()).isEqualTo(
+        "sttk.reasonederror.ReasonedExceptionTest");
+      assertThat(re.getMethodName()).isEqualTo(
+        "should_create_and_throw_an_exception_with_a_reason_and_a_cause");
+      assertThat(re.getFileName()).isEqualTo("ReasonedExceptionTest.java");
+      assertThat(re.getLineNumber()).isEqualTo(48);
     }
   }
 
@@ -73,6 +85,12 @@ public class ReasonedExceptionTest {
       assertThat(re.getMessage()).isEqualTo(
         "reason=FailToDoSomething, " +
         "name1=value1, name2=1234");
+      assertThat(re.getClassName()).isEqualTo(
+        "sttk.reasonederror.ReasonedExceptionTest");
+      assertThat(re.getMethodName()).isEqualTo(
+        "should_create_and_throw_an_exception_with_a_reason_and_situation_parameters");
+      assertThat(re.getFileName()).isEqualTo("ReasonedExceptionTest.java");
+      assertThat(re.getLineNumber()).isEqualTo(72);
     }
   }
 
@@ -101,8 +119,15 @@ public class ReasonedExceptionTest {
         "reason=FailToDoSomething, " +
         "name1=value1, name2=1234, " +
         "cause=java.io.IOException: Message");
+      assertThat(re.getClassName()).isEqualTo(
+        "sttk.reasonederror.ReasonedExceptionTest");
+      assertThat(re.getMethodName()).isEqualTo(
+        "should_create_and_throw_an_exception_with_a_reason_and_a_cause_and_situation_parameters");
+      assertThat(re.getFileName()).isEqualTo("ReasonedExceptionTest.java");
+      assertThat(re.getLineNumber()).isEqualTo(105);
     }
   }
+
 
   @Test
   public void should_print_message_when_cause_is_a_ReasonedException() {
@@ -136,6 +161,12 @@ public class ReasonedExceptionTest {
           "reason=InvalidState, " +
           "aaa=bbb, " +
           "cause=java.io.IOException: Message");
+        assertThat(re.getClassName()).isEqualTo(
+          "sttk.reasonederror.ReasonedExceptionTest");
+        assertThat(re.getMethodName()).isEqualTo(
+          "should_print_message_when_cause_is_a_ReasonedException");
+        assertThat(re.getFileName()).isEqualTo("ReasonedExceptionTest.java");
+        assertThat(re.getLineNumber()).isEqualTo(144);
       }
     }
   }

@@ -4,6 +4,7 @@
  */
 package sttk.reasonederror;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -50,6 +51,9 @@ public final class ReasonedException extends Exception {
   /** The map for error situation parameters. */
   private final Map<String, Object> situation;
 
+  /** The stack trace for the location of occurrence. */
+  private final StackTraceElement trace;
+
 
   /**
    * The constructor which takes a reason of this exception as an argument.
@@ -63,6 +67,11 @@ public final class ReasonedException extends Exception {
       final Map<String, Object> map) {
     this.reason = reason;
     this.situation = map;
+
+    var traces = getStackTrace();
+    setStackTrace(Arrays.copyOfRange(traces, 1, traces.length));
+
+    this.trace = traces[1];
   }
 
 
@@ -81,6 +90,11 @@ public final class ReasonedException extends Exception {
     super(cause);
     this.reason = reason;
     this.situation = map;
+
+    var traces = getStackTrace();
+    setStackTrace(Arrays.copyOfRange(traces, 1, traces.length));
+
+    this.trace = traces[1];
   }
 
 
@@ -152,6 +166,46 @@ public final class ReasonedException extends Exception {
     }
 
     return buf.toString();
+  }
+
+
+  /**
+   * Returns the fully qualified name of the class of this error occurrence.
+   *
+   * @return  The fully qualified name of the class of this error occurerce.
+   */
+  public String getClassName() {
+    return trace.getClassName();
+  }
+
+
+  /**
+   * Returns the name of the method of this error occurrence.
+   *
+   * @return  The name of the method of this error occurrence.
+   */
+  public String getMethodName() {
+    return trace.getMethodName();
+  }
+
+
+  /**
+   * Returns the name of the source file of this error occurrence.
+   *
+   * @return  The name of the source file of this error occurrence.
+   */
+  public String getFileName() {
+    return trace.getFileName();
+  }
+
+
+  /**
+   * Returns the line number of the source file of this error occurrence.
+   *
+   * @return  The line number of the source file of this error occurrence.
+   */
+  public int getLineNumber() {
+    return trace.getLineNumber();
   }
 
 
