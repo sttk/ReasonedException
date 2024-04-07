@@ -5,14 +5,9 @@
 *.ear
 hs_err_pid*
 
-# Directories 
-bin/
-jar/
-lib/
-doc/
-test/bin
-test/lib
-
+# Directories
+target/
+test-results-native/
 
 # OS generating files
 .DS_Store

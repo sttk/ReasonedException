@@ -1,0 +1,14 @@
+{
+  "types":[
+    {
+      "name":"com.github.sttk.reasonedexception.ReasonedExceptionTest$SerializableReason"
+    },
+    {
+      "name":"java.lang.IndexOutOfBoundsException"
+    }
+  ],
+  "lambdaCapturingTypes":[
+  ],
+  "proxies":[
+  ]
+}
