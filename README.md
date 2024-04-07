@@ -2,20 +2,21 @@
 
 The exception class with reason.
 
-In Java programming, it's quite cumbersome to to define exception classes for
-various exception cases. However, trying to handle multiple exception cases
+In Java programming, it's quite cumbersome to define exception classes for
+various exception cases. However, handling multiple exception cases
 with one exception class can make it difficult to identify specific cases.
 
 The `ReasonedException` class provided by this package resolves these issues by
 accepting a `Record` object representing the reason as an argument.
 Since the `Record` class can be defined with minimal implementation, defining a
 `Record` class for each exception case and passing it to `ReasonedException`
-enables us to create exception objects that can identify the specific exception
+enables to create exception objects that can identify the specific exception
 cases.
 
 In addition, the `Record` class allows to define fields, their getters, and
 constructors without need for cumbersome implementation.
-This means that a `Record` object as a reason can hold the values of variables representing the situation when an exception occurs.
+This means that a `Record` object as a reason can hold the values of variables
+representing the situation when an exception occurs.
 
 
 ## Install
