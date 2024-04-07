@@ -87,6 +87,15 @@ public final class ReasonedException extends Exception {
     return new RuntimeReasonedException(this);
   }
 
+  /**
+   * Writes a serial data of this exception to a stream.
+   * Since the {@link Record} class is not serializable, this method will throw
+   * a {@link NotSerializableException} if the {@code reason} field does not
+   * inherit {@link Serializable} to make it serializable.
+   *
+   * @param out  An {@link ObjectOutputStream} to which data is written.
+   * @throws IOException  if an I/O error occurs.
+   */
   private void writeObject(ObjectOutputStream out) throws IOException {
     if (! (this.reason instanceof Serializable)) {
       throw new NotSerializableException(this.reason.getClass().getName());
@@ -95,6 +104,16 @@ public final class ReasonedException extends Exception {
     out.writeObject(this.reason);
   }
 
+  /**
+   * Reconstitutes the {@code ReasonedException} instance from a stream and
+   * initialize the reason and cause properties when deserializing;
+   * If the reason by deserialization is null, this method throws {@link
+   * InvalidObjectException}.
+   *
+   * @param in  An {@link ObjectInputStream} from which data is read.
+   * @throws IOException  if an I/O error occurs.
+   * @throws ClassNotFoundException  if a serialized class cannot be loaded.
+   */
   private void readObject(ObjectInputStream in)
     throws ClassNotFoundException, IOException
   {
