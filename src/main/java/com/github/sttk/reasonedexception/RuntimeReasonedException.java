@@ -7,6 +7,8 @@ package com.github.sttk.reasonedexception;
 /**
  * Is the exception class that has a {@link Record} object indicating the
  * reason why this exception occurs.
+ *
+ * @since 0.2
  */
 public final class RuntimeReasonedException extends RuntimeException {
 
