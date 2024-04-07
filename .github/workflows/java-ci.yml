@@ -2,35 +2,27 @@ name: Java CI
 
 on:
   push:
-    branches: [ '*' ]
+    branches: [ '*', '*/*' ]
 
 jobs:
-
   build:
-    runs-on: ubuntu-latest
+    name: Build for GraalVM (OpenJDK ${{ matrix.javaver }}) on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
-        javaver: [11, 16, 17]
+        javaver: [21]
+        os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Set up JDK
-      uses: actions/setup-java@v2
+    - uses: actions/checkout@v4
+    - name: GitHub Action for GraalVM
+      uses: graalvm/setup-graalvm@v1
       with:
         java-version: ${{ matrix.javaver }}
-        distribution: 'temurin'
-
-    - name: Set up Ant and Ivy
-      run: |
-        ANT_LIB=/usr/share/ant/lib
-        wget https://repo1.maven.org/maven2/org/apache/ivy/ivy/2.5.0/ivy-2.5.0.jar -P ${ANT_LIB}
-        java -version
-        ant -version
-
-    - name: Resolve dependencies
-      run: ant setup
-
-    - name: Build and CI with Ant
-      run: ant -version #ci
-
-
+        distribution: 'graalvm'
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        native-image-job-reports: 'true'
+    - name: Build and test
+      run: mvn package
+    - name: Native test
+      run: mvn -Pnative test
