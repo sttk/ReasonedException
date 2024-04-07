@@ -20,7 +20,6 @@ public final class RuntimeReasonedException extends RuntimeException {
    */
   RuntimeReasonedException(ReasonedException e) {
     super(e);
-    setStackTrace(e.getStackTrace());
   }
 
   /**

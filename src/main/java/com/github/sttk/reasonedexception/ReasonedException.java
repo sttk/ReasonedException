@@ -84,9 +84,7 @@ public final class ReasonedException extends Exception {
    * @return  A {@link RuntimeReasonedException} object.
    */
   public RuntimeReasonedException toRuntimeException() {
-    var re = new RuntimeReasonedException(this);
-    re.setStackTrace(this.getStackTrace());
-    return re;
+    return new RuntimeReasonedException(this);
   }
 
   private void writeObject(ObjectOutputStream out) throws IOException {
