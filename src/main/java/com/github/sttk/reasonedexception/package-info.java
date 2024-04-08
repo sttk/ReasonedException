@@ -6,6 +6,6 @@
 /**
  * This package contains modules of the exception with reason.
  *
- * @version 0.1
+ * @since 0.2
  */
 package com.github.sttk.reasonedexception;
