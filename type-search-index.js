@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"sttk.reasonederror","l":"ReasonedException.Builder"},{"p":"sttk.reasonederror","l":"CreationHandler"},{"p":"sttk.reasonederror","l":"ReasonedException"},{"p":"sttk.reasonederror","l":"ReasonedExceptionConfiguration"}]
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.github.sttk.reasonedexception","l":"ReasonedException"},{"p":"com.github.sttk.reasonedexception","l":"RuntimeReasonedException"}];updateSearchResults();
