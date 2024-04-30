@@ -8,4 +8,4 @@
  *
  * @since 0.2
  */
-package com.github.sttk.reasonedexception;
+package com.github.sttk.exception;

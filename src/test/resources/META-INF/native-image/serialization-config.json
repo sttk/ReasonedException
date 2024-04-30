@@ -1,7 +1,7 @@
 {
   "types":[
     {
-      "name":"com.github.sttk.reasonedexception.ReasonedExceptionTest$SerializableReason"
+      "name":"com.github.sttk.exception.ReasonedExceptionTest$SerializableReason"
     },
     {
       "name":"java.lang.IndexOutOfBoundsException"
