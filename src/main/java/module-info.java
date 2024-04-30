@@ -4,7 +4,7 @@
  */
 
 /**
- * Defines the module of this library.
+ * Defines the module for the exception with reason.
  */
 module com.github.sttk.reasonedexception {
   exports com.github.sttk.exception;

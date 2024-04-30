@@ -14,8 +14,6 @@ import java.io.InvalidObjectException;
 /**
  * Is the exception class that has a {@link Record} object indicating the
  * reason why this exception occurs.
- *
- * @since 0.2
  */
 public final class ReasonedException extends Exception {
 
