@@ -7,5 +7,5 @@
  * Defines the module of this library.
  */
 module com.github.sttk.reasonedexception {
-  exports com.github.sttk.reasonedexception;
+  exports com.github.sttk.exception;
 }

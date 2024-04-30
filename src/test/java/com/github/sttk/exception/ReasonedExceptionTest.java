@@ -1,4 +1,4 @@
-package com.github.sttk.reasonedexception;
+package com.github.sttk.exception;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
