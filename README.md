@@ -110,6 +110,7 @@ This framework supports JDK 21 or later.
 ### Actually checked JDK versions:
 
 - GraalVM CE 21.0.2+13.1 (openjdk version 21.0.2)
+- GraalVM CE 22.0.1+8.1  (openjdk version 22.0.1)
 
 
 ## License
