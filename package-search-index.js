@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"com.github.sttk.reasonedexception","l":"com.github.sttk.reasonedexception"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"com.github.sttk.reasonedexception","l":"com.github.sttk.exception"}];updateSearchResults();
