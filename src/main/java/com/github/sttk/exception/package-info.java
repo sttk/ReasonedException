@@ -4,8 +4,6 @@
  */
 
 /**
- * This package contains modules of the exception with reason.
- *
- * @since 0.2
+ * This package contains classes of the exception with reason.
  */
 package com.github.sttk.exception;
