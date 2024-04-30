@@ -9,7 +9,7 @@
   <version>0.2.0</version>
   <packaging>jar</packaging>
 
-  <name>reasonedexception</name>
+  <name>ReasonedException</name>
   <description>The exception with reason</description>
   <url>https://github.com/sttk/ReasonedException</url>
 
@@ -31,8 +31,8 @@
 
   <scm>
     <url>https://github.com/sttk/ReasonedException</url>
-    <connection>scm:git:git://github.com/sttk/reasonedexception.git</connection>
-    <developerConnection>scm:git:git://github.com/sttk/reasonedexception.git</developerConnection>
+    <connection>scm:git:git://github.com/sttk/ReasonedException.git</connection>
+    <developerConnection>scm:git:git://github.com/sttk/ReasonedException.git</developerConnection>
   </scm>
 
   <properties>
@@ -209,7 +209,7 @@
         <repository>
           <id>github</id>
           <name>GitHub Packages</name>
-          <url>https://maven.pkg.github.com/sttk/reasonedexception</url>
+          <url>https://maven.pkg.github.com/sttk/ReasonedException</url>
         </repository>
       </distributionManagement>
     </profile>
