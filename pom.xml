@@ -201,7 +201,7 @@
     <profile>
       <id>trace</id>
       <properties>
-        <argLine>-agentlib:native-image-agent=config-output-dir=src/main/resources/META-INF/native-image</argLine>
+        <argLine>-agentlib:native-image-agent=config-output-dir=target/native-trace/</argLine>
       </properties>
     </profile>
     <profile>
