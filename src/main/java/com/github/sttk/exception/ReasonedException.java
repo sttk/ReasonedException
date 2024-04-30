@@ -2,7 +2,7 @@
  * ReasonedException class.
  * Copyright (C) 2024 Takayuki Sato. All Rights Reserved.
  */
-package com.github.sttk.reasonedexception;
+package com.github.sttk.exception;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;

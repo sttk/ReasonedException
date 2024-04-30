@@ -1,7 +1,7 @@
 {
   "types":[
     {
-      "name":"com.github.sttk.reasonedexception.ReasonedException"
+      "name":"com.github.sttk.exception.ReasonedException"
     },
     {
       "name":"java.lang.ClassNotFoundException"

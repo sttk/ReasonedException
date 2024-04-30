@@ -1,4 +1,4 @@
-package com.github.sttk.reasonedexception;
+package com.github.sttk.exception;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -17,7 +17,7 @@ public class RuntimeReasonedExceptionTest {
     var rtexc = exc.toRuntimeException();
 
     assertThat(rtexc.getMessage()).isEqualTo(
-      "com.github.sttk.reasonedexception.ReasonedException: " +
+      "com.github.sttk.exception.ReasonedException: " +
       "IndexOutOfRange{index=4, min=0, max=3}"
     );
 

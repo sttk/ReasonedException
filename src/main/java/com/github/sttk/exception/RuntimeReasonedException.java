@@ -2,7 +2,7 @@
  * RuntimeReasonedException class.
  * Copyright (C) 2024 Takayuki Sato. All Rights Reserved.
  */
-package com.github.sttk.reasonedexception;
+package com.github.sttk.exception;
 
 /**
  * Is the exception class that has a {@link Record} object indicating the
