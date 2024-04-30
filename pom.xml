@@ -11,7 +11,7 @@
 
   <name>reasonedexception</name>
   <description>The exception with reason</description>
-  <url>https://github.com/sttk/reasonedexception</url>
+  <url>https://github.com/sttk/ReasonedException</url>
 
   <licenses>
     <license>
@@ -30,7 +30,7 @@
   </developers>
 
   <scm>
-    <url>https://github.com/sttk/reasonedexception</url>
+    <url>https://github.com/sttk/ReasonedException</url>
     <connection>scm:git:git://github.com/sttk/reasonedexception.git</connection>
     <developerConnection>scm:git:git://github.com/sttk/reasonedexception.git</developerConnection>
   </scm>
