@@ -79,7 +79,7 @@ public class ReasonedExceptionTest {
     var cause = new IndexOutOfBoundsException(4);
     var exc = new ReasonedException(new IndexOutOfRange(4, 0, 3), cause);
     assertThat(exc.getMessage()).isEqualTo(
-      "IndexOutOfRange{index=4, min=0, max=3, " +
+      "IndexOutOfRange{index=4, min=0, max=3, cause=" +
       "java.lang.IndexOutOfBoundsException: Index out of range: 4}"
     );
   }

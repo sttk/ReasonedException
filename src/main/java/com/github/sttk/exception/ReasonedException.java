@@ -72,7 +72,7 @@ public final class ReasonedException extends Exception {
     var s = this.reason.toString();
     s = s.substring(c.length() + 1, s.length()-1);
     if (getCause() != null) {
-      s += ", " + this.getCause().toString();
+      s += ", cause=" + this.getCause().toString();
     }
     return c + "{" + s + "}";
   }
