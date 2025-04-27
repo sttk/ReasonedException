@@ -1,5 +1,7 @@
 # [ReasonedException][repo-url] [![Maven Central][mvn-img]][mvn-url] [![GitHub.io][io-img]][io-url] [![CI Status][ci-img]][ci-url] [![MIT License][mit-img]][mit-url]
 
+> This repository has been archived. Please use [err-java](https://github.com/sttk/errs-java) instead, which provides a similar implementation.
+
 The exception class with reason.
 
 In Java programming, it's quite cumbersome to define exception classes for
